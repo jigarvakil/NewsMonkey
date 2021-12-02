@@ -20,6 +20,9 @@ export class NewsItem extends Component {
                     className="card-img-top"
                     src={!imgURL ? logo : imgURL}
                     alt="Card  cap"
+                    style={{
+                      borderRadius: '20px',
+                    }}
                   />
                 </div>
                 <div className="col-md-8">

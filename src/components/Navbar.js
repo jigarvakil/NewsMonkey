@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import logo from './NewsMonkeyLogo.png';
+
 export class Navbar extends Component {
   render() {
     return (
       <div>
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
-          <a href="/">
+          <Link to="/">
             <img src={logo} alt="NewsMonkey Logo" width="100px" />
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -22,15 +24,46 @@ export class Navbar extends Component {
 
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto">
-              <li className="nav-item active">
-                <a className="nav-link mx-2" href="/">
+              <li className="nav-item">
+                <Link className="nav-link mx-2" to="/">
                   Home <span className="sr-only">(current)</span>
-                </a>
+                </Link>
+              </li>
+
+              <li className="nav-item">
+                <Link className="nav-link" to="/business">
+                  Business
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/about">
-                  About
-                </a>
+                <Link className="nav-link" to="/entertainment">
+                  Entertainment
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/general">
+                  General
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/health">
+                  Health
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/science">
+                  Science
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/sports">
+                  Sports
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/technology">
+                  Technology
+                </Link>
               </li>
             </ul>
           </div>
